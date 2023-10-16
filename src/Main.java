@@ -1,7 +1,31 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
-        exampleBoat1();
-        exampleBoat2();
+       // exampleBoat1();
+       // exampleBoat2();
+        examplePassBoat1();
+    }
+
+    private static void examplePassBoat1() {
+        PassMotorBoat pmb = new PassMotorBoat(100, 1.0, 2);
+        pmb.takePassenger("Нина");
+        System.out.println(Arrays.toString(pmb.passengers));
+        pmb.takePassenger("Вася");
+        System.out.println(Arrays.toString(pmb.passengers));
+        pmb.takePassenger("кузнец");
+        System.out.println(Arrays.toString(pmb.passengers));
+
+        String person = pmb.unloadLastPassenger();
+        System.out.println("на берег сошел "+person);
+        System.out.println("в лодке сейчас: "+ Arrays.toString(pmb.passengers));
+        person = pmb.unloadLastPassenger();
+        System.out.println("на берег сошел "+person);
+        System.out.println("в лодке сейчас: "+ Arrays.toString(pmb.passengers));
+        person = pmb.unloadLastPassenger();
+        System.out.println("на берег сошел "+person);
+        System.out.println("в лодке сейчас: "+ Arrays.toString(pmb.passengers));
+
     }
 
     private static void exampleBoat2() {
