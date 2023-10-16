@@ -1,4 +1,4 @@
-public class Boat {
+public class Boat { //неявно наследует классу Object
     double maxCargo;
     double cargo;
 
@@ -19,5 +19,10 @@ public class Boat {
 
     public double getCargo() {
         return cargo;
+    }
+    @Override
+    public String toString()
+    {
+        return "<Лодка макс груз: "+this.maxCargo+" загружено: "+cargo+"/>";
     }
 }

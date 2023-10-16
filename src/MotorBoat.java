@@ -21,4 +21,13 @@ public class MotorBoat extends Boat{
         if (engineOn)
             System.out.println("тарахтит мотор объемом "+engineV);
     }
+
+    @Override
+    public String toString() {
+        return "MotorBoat{" +
+                "engineV=" + engineV +
+                ", maxCargo=" + maxCargo +
+                ", cargo=" + cargo +
+                '}';
+    }
 }

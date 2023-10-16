@@ -43,4 +43,13 @@ public class PassMotorBoat extends MotorBoat{
         return Arrays.toString(passengers);
     }
 
+    //переопределение метода, унаследованного от родителя
+    @Override
+    public String toString() {
+        return "PassMotorBoat{" +
+                "maxAmount=" + maxAmount +
+                ", amount=" + amount +
+                ", passengers=" + Arrays.toString(passengers) +
+                '}';
+    }
 }

@@ -4,7 +4,19 @@ public class Main {
     public static void main(String[] args) {
        // exampleBoat1();
        // exampleBoat2();
-        examplePassBoat1();
+      //  examplePassBoat1();
+
+        examplePassBoat2();
+    }
+
+    private static void examplePassBoat2() {
+        PassMotorBoat pmb2 = new PassMotorBoat(150, 1.5, 4);
+        System.out.println(pmb2.toString());        //явный вызов toString()
+        System.out.println(pmb2.getClass().getCanonicalName());
+        System.out.println(pmb2);                   //неявный  вызов toString()
+
+        Boat b = new Boat(111);
+        System.out.println(b +" "+ pmb2);
     }
 
     private static void examplePassBoat1() {
