@@ -10,21 +10,21 @@ public class Main {
     private static void examplePassBoat1() {
         PassMotorBoat pmb = new PassMotorBoat(100, 1.0, 2);
         pmb.takePassenger("Нина");
-        System.out.println(Arrays.toString(pmb.passengers));
+        System.out.println(pmb.getPassengersStr());
         pmb.takePassenger("Вася");
-        System.out.println(Arrays.toString(pmb.passengers));
+        System.out.println(pmb.getPassengersStr());
         pmb.takePassenger("кузнец");
-        System.out.println(Arrays.toString(pmb.passengers));
+        System.out.println(pmb.getPassengersStr());
 
         String person = pmb.unloadLastPassenger();
         System.out.println("на берег сошел "+person);
-        System.out.println("в лодке сейчас: "+ Arrays.toString(pmb.passengers));
+        System.out.println("в лодке сейчас: "+ pmb.getPassengersStr());
         person = pmb.unloadLastPassenger();
         System.out.println("на берег сошел "+person);
-        System.out.println("в лодке сейчас: "+ Arrays.toString(pmb.passengers));
+        System.out.println("в лодке сейчас: "+ pmb.getPassengersStr());
         person = pmb.unloadLastPassenger();
         System.out.println("на берег сошел "+person);
-        System.out.println("в лодке сейчас: "+ Arrays.toString(pmb.passengers));
+        System.out.println("в лодке сейчас: "+ pmb.getPassengersStr());
 
     }
 
